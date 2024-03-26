@@ -1,40 +1,39 @@
 package com.mentoring.mju.v1.racing.domain;
 
+import java.util.ArrayList;
 import java.util.Random;
 
+
 public class Car {
+    private static final int Move_Count=0;
+    private static final int Boundary_Move_count=3;
+
+
     private String carName;
-    private int number;
-    private final int BoundaryNumber = 10;
+    private int randomNumber;
     private int moveCount;
-    public Car(String carName) {
+
+    public Car(String carName, int moveCount) {
         this.carName = carName;
+        this.randomNumber = randomNumber;
+        this.moveCount = Move_Count;
+        extracted(carName);
     }
 
-    public void Moving(int moveCount){
-        this.moveCount=getMoveCount();
-    }
-    public void Random(int number){
-        this.number=getNumber();
-    }
+    //예외하기
 
-    public String getCarName() {
-        carName.split(",");
-        return carName;
-    }
-
-    public int getNumber() {
-        //랜덤 숫자 데이터 받기
-        Random random = new Random();
-        random.nextInt(BoundaryNumber);
-        return number;
-    }
-
-    public int getMoveCount() {
-        // 숫자가 만약 4이상이면 moveCount++
-        if (getNumber() >= 4) {
-            moveCount++;
+    private static void extracted(String carName) {
+        for(char exceoptionName: carName.toCharArray()){
+            if(Character.isDigit(exceoptionName)){
+                throw new IllegalArgumentException("숫자라서 예외");
+            }
         }
-        return moveCount;
     }
+
+    public void move(int randomNumber){
+        if(randomNumber>Boundary_Move_count){ //3보다 크면 움직인다.
+            this.moveCount++;
+        }
+    }
+
 }
