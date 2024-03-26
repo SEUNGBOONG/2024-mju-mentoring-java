@@ -8,5 +8,13 @@ public class Cars {
 
     public Cars(final List<Car> cars) {
         this.cars = cars;
+        Car carData=new Car("pobi,da,crong");
+        cars.add(carData);
     }
+
+
+
+
 }
+
+
