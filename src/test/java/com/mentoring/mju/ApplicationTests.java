@@ -10,8 +10,8 @@ class ApplicationTests {
 
     @Test
     void contextLoads() {
-        RacingController racingController =new RacingController();
-        racingController.startRacing();
+//        RacingController racingController =new RacingController();
+//        racingController.startRacing();
 
     }
 

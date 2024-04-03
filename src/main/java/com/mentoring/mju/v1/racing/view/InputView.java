@@ -1,31 +1,17 @@
 package com.mentoring.mju.v1.racing.view;
 
-import com.mentoring.mju.v1.racing.domain.Car;
-import com.mentoring.mju.v1.racing.domain.Cars;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class InputView {
-    private static int chance;
-    private String moveCarName;
-
     static final Scanner input = new Scanner(System.in);
-
-    public InputView() {
-        OutputView outputView = new OutputView();
-        outputView.tryChance();
-        chance = input.nextInt();
-        outputView.moveCarName();
-        moveCarName = input.next();
+    public int getChance() {
+        System.out.println("시도할 회수는?");
+        return input.nextInt();
     }
-
-    public static int getChance() {
-        return chance;
-    }
-
     public String getMoveCarName() {
-        return moveCarName;
+        System.out.println("자동차 이름 입력");
+        return input.next();
     }
 // Todo : 입력 받기
 }
