@@ -23,24 +23,21 @@
     - setter 사용은 지양하기
 
 
-
-
-
-- Car 
-  - [] 자동차 이름 예외처리 이거를 InputView에다가 적용인가? 
-  - [] 자동차가 숫자 3보다 크면 움직인다. 
-  - [] 입력받은 자동차가 숫자면 예외처리한다. 
-  - [] 
-- Cars 
-  - [o] 자동차 쉼표 구별 
-  - [o] 승자 구하기 
+- Car
+    - [x] 자동차가 숫자 3보다 크면 움직인다.
+    - []
+- Cars
+    - [o] 자동차 쉼표 구별
+    - [o] 승자 구하기
 
 -InputView
 
+- [] 자동차 이름 예외처리 이거를 InputView에다가 적용인가?
 
-- RacingController 
+
+- RacingController
   - 
 
 그러니까 지금 OutputView에서 받은 데이터를 InputView 에서 저장을했고
-시도할 횟수, 자동차 이름 저장했고,이제 Car에서  자동차이름 예외처리하고, InputView 에서 받은 
+시도할 횟수, 자동차 이름 저장했고,이제 Car에서 자동차이름 예외처리하고, InputView 에서 받은
 시도할횟수만큼 moveCount를 올리고, Cars에서 쉼표로 처리하고 승리자를 정한다. 

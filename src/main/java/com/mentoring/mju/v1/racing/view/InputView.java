@@ -1,17 +1,17 @@
 package com.mentoring.mju.v1.racing.view;
 
-
 import java.util.Scanner;
 
 public class InputView {
-    static final Scanner input = new Scanner(System.in);
-    public int getChance() {
-        System.out.println("시도할 회수는?");
-        return input.nextInt();
-    }
+    private static final Scanner scanner = new Scanner(System.in);
+
     public String getMoveCarName() {
-        System.out.println("자동차 이름 입력");
-        return input.next();
+        System.out.println("자동차 이름 입력 (쉼표로 구분하여 입력하세요): ");
+        return scanner.nextLine();
     }
-// Todo : 입력 받기
+
+    public int getChance() {
+        System.out.println("시도할 회수는? ");
+        return Integer.parseInt(scanner.nextLine());
+    }
 }

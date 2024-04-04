@@ -1,29 +1,25 @@
 package com.mentoring.mju.v1.racing.view;
 
 import com.mentoring.mju.v1.racing.domain.Car;
-import com.mentoring.mju.v1.racing.domain.Cars;
 
+import java.util.List;
 
 public class OutputView {
-    private Car car;
-    // TODO : 화면 출력 구현
-
-    private String moveResult() {
-        StringBuilder moveResult = new StringBuilder();
-        for (int i = 0; i < car.move(); i++) {
-            char c = moveResult.charAt(i);
-            if (Character.isDigit(c)) {
-                moveResult.append("-");
-            } else {
-                moveResult.append(c);
+    public void printResult(List<Car> cars) {
+        for (Car car : cars) {
+            StringBuilder result = new StringBuilder();
+            result.append(car.getCarName()).append(": ");
+            for (int i = 0; i < car.getMoveCount(); i++) {
+                result.append("-");
             }
-        }
-        return moveResult.toString();
-    }
-    public void printResult(Car car) {
-        for (int i = 0; i < car.move(); i++) {
-            System.out.println("-".repeat(car.move()));
+            System.out.println(result);
         }
     }
 
+    public void printWinners(List<Car> winners) {
+        System.out.println("Winner : ");
+        for (Car winner : winners) {
+            System.out.println(winner.getCarName());
+        }
+    }
 }
