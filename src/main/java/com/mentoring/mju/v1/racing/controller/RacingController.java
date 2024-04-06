@@ -9,8 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RacingController {
+    private Cars cars;
     private InputView inputView;
+
     private OutputView outputView;
+
 
     public RacingController(InputView inputView, OutputView outputView) {
         this.inputView = inputView;
@@ -18,7 +21,7 @@ public class RacingController {
     }
 
     public void startRacing() {
-        List<Car> carsList = createCars();
+        List<Car> carsList = cars.createCars();
         int chance = inputView.getChance();
         Cars cars = new Cars(carsList);
         for (int i = 0; i < chance; i++) {
@@ -29,13 +32,5 @@ public class RacingController {
         outputView.printWinners(winners);
     }
 
-    private List<Car> createCars() {
-        String carNames = inputView.getMoveCarName();
-        String[] split = carNames.split(",");
-        List<Car> carsList = new ArrayList<>();
-        for (String name : split) {
-            carsList.add(new Car(name));
-        }
-        return carsList;
-    }
+
 }
