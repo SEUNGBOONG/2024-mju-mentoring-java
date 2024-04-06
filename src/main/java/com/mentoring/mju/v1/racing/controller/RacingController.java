@@ -14,7 +14,6 @@ public class RacingController {
 
     private OutputView outputView;
 
-    private String Comma = ",";
 
 
     public RacingController(InputView inputView, OutputView outputView) {
@@ -23,7 +22,7 @@ public class RacingController {
     }
 
     public void startRacing() {
-        List<Car> carsList = createCars();
+        List<Car> carsList = Cars.createCars();
         int chance = inputView.getChance();
         Cars cars = new Cars(carsList);
         for (int i = 0; i < chance; i++) {
@@ -34,14 +33,5 @@ public class RacingController {
         outputView.printWinners(winners);
     }
 
-    public List<Car> createCars() {
-        String carNames = InputView.getMoveCarName();
-        String[] split = carNames.split(Comma);
-        List<Car> carsList = new ArrayList<>();
-        for (String name : split) {
-            carsList.add(new Car(name));
-        }
-        return carsList;
-    }
 
 }

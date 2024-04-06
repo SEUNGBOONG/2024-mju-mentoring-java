@@ -9,9 +9,9 @@ public class Car {
 
     private int moveCount;
 
-    private int INITIALIZATION_NUMBER=0;
+    private int INITIALIZATION_NUMBER = 0;
 
-    private int MAXIMUM_RANDOM_NUMBER=10;
+    private int MAXIMUM_RANDOM_NUMBER = 10;
 
 
     public Car(String carName) {
@@ -25,8 +25,6 @@ public class Car {
             this.moveCount++;
         }
     }
-
-
     public String getCarName() {
         return carName;
     }
