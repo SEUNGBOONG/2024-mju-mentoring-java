@@ -7,7 +7,6 @@ import java.util.List;
 
 public class Cars {
     private List<Car> cars;
-    private String Comma = ",";
 
     public Cars(List<Car> cars) {
         this.cars = cars;
@@ -33,13 +32,5 @@ public class Cars {
         return winners;
     }
 
-    public List<Car> createCars() {
-        String carNames = InputView.getMoveCarName();
-        String[] split = carNames.split(Comma);
-        List<Car> carsList = new ArrayList<>();
-        for (String name : split) {
-            carsList.add(new Car(name));
-        }
-        return carsList;
-    }
+
 }
