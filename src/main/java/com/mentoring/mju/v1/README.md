@@ -26,7 +26,7 @@
 - Car
     - [x] 자동차가 숫자 3보다 크면 움직인다.
 - Cars
-    - [ㅌ] 승자 구하기
+    - [x] 승자 구하기
     - [x] 자동차 움직이기
 
 - InputView 
@@ -48,11 +48,6 @@
   - OutputView에서 스트링 빌더를 굳이 사용했던이유 다시 고민하기 
   - 정확하게 StringBuilder와 String 차이 알기 https://ssj9902.tistory.com/entry/%EC%9E%90%EB%B0%94-%EC%8A%A4%ED%8A%B8%EB%A7%81-String-%EC%8A%A4%ED%8A%B8%EB%A7%81%EB%B2%84%ED%8D%BCString-Buffer-%EC%8A%A4%ED%8A%B8%EB%A7%81%EB%B9%8C%EB%8D%94String-Builder-%EC%A0%95%EB%A6%AC
   - 
-
-질문할 내용
-//move 메서드를 실행시키면 Random 객체를 계속 생성하는 것 같습니다!
-// 현재 경우에서는 move에 대한 테스트가 어려울 것 같은데
-// 이렇게 구현하신 이유가 따로 있는지 궁금합니다. >>
 
 
 

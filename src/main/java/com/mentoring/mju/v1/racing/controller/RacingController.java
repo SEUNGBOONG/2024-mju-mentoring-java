@@ -10,11 +10,10 @@ import java.util.List;
 
 public class RacingController {
     private Cars cars;
+
     private InputView inputView;
 
     private OutputView outputView;
-
-
 
     public RacingController(InputView inputView, OutputView outputView) {
         this.inputView = inputView;
