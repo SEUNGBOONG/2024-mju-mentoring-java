@@ -26,6 +26,10 @@ public class Cars {
         for (Car car : cars) {
             maxCount = Math.max(maxCount, car.getMoveCount());
         }
+        return getCars(maxCount, winners);
+    }
+
+    private List<Car> getCars(int maxCount, List<Car> winners) {
         for (Car car : cars) {
             if (maxCount == car.getMoveCount()) {
                 winners.add(car);
