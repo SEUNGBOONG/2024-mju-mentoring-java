@@ -49,5 +49,16 @@
   - 정확하게 StringBuilder와 String 차이 알기 https://ssj9902.tistory.com/entry/%EC%9E%90%EB%B0%94-%EC%8A%A4%ED%8A%B8%EB%A7%81-String-%EC%8A%A4%ED%8A%B8%EB%A7%81%EB%B2%84%ED%8D%BCString-Buffer-%EC%8A%A4%ED%8A%B8%EB%A7%81%EB%B9%8C%EB%8D%94String-Builder-%EC%A0%95%EB%A6%AC
   - 
 
+  String
+- String 은 불변 자료형이라고 불린다. 
+- 초기 공간과 다르게 많은 시간과 자연을 사용함.
+- 불변하게 설계한 이유는 캐싱,보안, 동기화, 성능 측면 이점을 얻기위해서다
+  -String pool에 각 리터럴 문자열 하남나 저장 ( 캐싱)
+  - 데이터베이스에 연결 수신하기 위해 문자열로 전달된다. 만약 해커가 참조값을 변경하여 보안 문제일으킬수 있다.
 
+StringBuffer/StringBuilder
+- 이것들은 변할 수 있다. 
+- 객체의 공간이 부족해지는 경우 버퍼의 크기를 유연하게 늘려준다.
+- String은 한번 생성되면 불변적인 특징 때문에 값을 업데이트하면, 새로운 인스턴스가 생겨 메모리공간을 차지한다.
+- 
 
