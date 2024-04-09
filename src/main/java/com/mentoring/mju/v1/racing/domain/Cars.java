@@ -1,17 +1,26 @@
 package com.mentoring.mju.v1.racing.domain;
 
-import com.mentoring.mju.v1.racing.view.InputView;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Cars {
+
+    private static final String COMMA = ",";
+
     private List<Car> cars;
 
-    private static String Comma = ",";
-
-    public Cars(List<Car> cars) {
+    private Cars(List<Car> cars) {
         this.cars = cars;
+    }
+
+    public static Cars createCars(String carNames) {
+        String[] split = carNames.split(COMMA);
+        List<Car> carsList = new ArrayList<>();
+        for (String name : split) {
+            carsList.add(new Car(name));
+        }
+
+        return new Cars(carsList);
     }
 
     public void moveAllCars() {
@@ -38,13 +47,7 @@ public class Cars {
         return winners;
     }
 
-    public static List<Car> createCars() {
-        String carNames = InputView.getMoveCarName();
-        String[] split = carNames.split(Comma);
-        List<Car> carsList = new ArrayList<>();
-        for (String name : split) {
-            carsList.add(new Car(name));
-        }
-        return carsList;
+    public List<Car> getCars() {
+        return cars;
     }
 }
