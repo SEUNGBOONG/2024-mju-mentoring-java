@@ -3,8 +3,15 @@ package com.mentoring.mju.v1.racing.view;
 import java.util.Scanner;
 
 public class InputView {
+    private static final Scanner scanner = new Scanner(System.in);
 
-    private static final Scanner input = new Scanner(System.in);
+    public static String getMoveCarName() {
+        System.out.println("자동차 이름 입력 (쉼표로 구분하여 입력하세요): ");
+        return scanner.nextLine();
+    }
 
-    // Todo : 입력 받기
+    public int getChance() {
+        System.out.println("시도할 회수는? ");
+        return Integer.parseInt(scanner.nextLine());
+    }
 }
