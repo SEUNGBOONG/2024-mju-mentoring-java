@@ -19,7 +19,6 @@ public class Cars {
         for (String name : split) {
             carsList.add(new Car(name));
         }
-
         return new Cars(carsList);
     }
 
