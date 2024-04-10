@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class Car {
 
-    private static final int BOUNDARY_MOVE_COUNT = 3;
+    private final int BOUNDARY_MOVE_COUNT = 3;
     private final int INITIALIZATION_NUMBER = 0;
     private final int MAXIMUM_RANDOM_NUMBER = 10;
 
-    private String carName;
+    private final String carName;
     private int moveCount;
 
     public Car(String carName) {
@@ -17,6 +17,7 @@ public class Car {
     }
 
     public void move() {
+
         Random random = new Random();
         if (random.nextInt(MAXIMUM_RANDOM_NUMBER) > BOUNDARY_MOVE_COUNT) {
             this.moveCount++;
@@ -31,3 +32,4 @@ public class Car {
         return moveCount;
     }
 }
+
