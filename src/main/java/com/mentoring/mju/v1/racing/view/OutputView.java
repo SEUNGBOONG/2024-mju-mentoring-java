@@ -13,7 +13,7 @@ public class OutputView {
         }
     }
 
-    private static String ConversionMove(Car car, String result) {
+    private String ConversionMove(Car car, String result) {
         for (int i = 0; i < car.getMoveCount(); i++) {
             result += "-";
         }
