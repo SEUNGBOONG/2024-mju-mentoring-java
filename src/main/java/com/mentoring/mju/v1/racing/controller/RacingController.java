@@ -9,16 +9,11 @@ import java.util.List;
 
 public class RacingController {
 
-    // 상수
-    private static final int NUM = 1;
-
     // 컴포넌트 (안변하면 final)
     private final InputView inputView;
     private final OutputView outputView;
 
     // 객체 or 필드
-    private Cars cars;
-
     public RacingController(InputView inputView, OutputView outputView) {
         this.inputView = inputView;
         this.outputView = outputView;
